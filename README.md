@@ -13,10 +13,10 @@ Vulnerability types: XSS
 Tested in version: 4.2
 Fixed in version: 4.2.13
 
-#GIF
+-GIF
 ![1st-Rushma](https://user-images.githubusercontent.com/89615796/161604808-70a8901c-b0b2-4301-a3ee-d4c664f6f61d.gif)
 
-Steps to recreate: Create a post with a youtube video embedded into the post. The post is injected containing a simple script as:
+-Steps to recreate: Create a post with a youtube video embedded into the post. The post is injected containing a simple script as:
 
 [embed src='https://youtube.com/embed/123\x3csvg onload=alert(20)\x3e'][/embed]
 
