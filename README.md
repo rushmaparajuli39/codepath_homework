@@ -3,7 +3,7 @@ Time Spent: 10 hours
 
 > Objective: To find, analyze, recreate, and document three vulnerabilities affecting an old version of WordPress.
 
-##Pentesting Report
+## Pentesting Report
 1. CVE-2017-6817
 Current Description
 In WordPress before 4.7.3 (wp-includes/embed.php), there is authenticated Cross-Site Scripting (XSS) in YouTube URL Embeds.
@@ -23,3 +23,16 @@ Fixed in version: 4.2.13
 Affected source code:
 shortcode_parse_atts
 
+2. CVE 2019-17671
+Current Description
+In WordPress <= 5.2., there is a vulnerability that could allow an unauthenticated user to view private or draft posts due to an issue within WP_Query.
+**WordPress <= 5.2. - Unauthenticated View Private/Draft Posts
+
+Vulnerability types: IDOR/BYPASS
+Tested in version: 4.2
+Fixed in version: 4.2.25
+
+-GIF
+
+![2nd-Rushma](https://user-images.githubusercontent.com/89615796/161607128-d79003c2-ae8e-4229-a05d-2a42b2463643.gif)
+Steps to recreate: Adding ?static=1 to a wordpress URL should leak its secret content. http://wpdistillery.vm/?static=1 will result in displaying all the draft, private, password protected and trashed pages.
