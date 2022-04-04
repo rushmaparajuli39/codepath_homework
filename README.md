@@ -56,11 +56,11 @@ Description: When you view the salesperson info, you can put ?id=10 or ?id=11 to
 
 Vulnerability #2: Cross-Site Request Forgery (CSRF)
 
-Description:
+Description: A link to malicious form is provided through the feedback box in the contact page.  When a logged-in admin opens the link, a new user is added. https://rushmaparajuli39.github.io/csrftest/ is the form that I used.
+![csrf](https://user-images.githubusercontent.com/89615796/161641302-ce2c9561-f0bc-4cbd-afc3-1f6fc534356d.gif)
 
-<img src="red-vuln2.gif">
 
 
 ## Notes
+Took awhile to figure out which color had which vulnerabilities.
 
-Describe any challenges encountered while doing the work
